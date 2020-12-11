@@ -1,0 +1,336 @@
+*{
+  /* padding: 10px; */
+}
+body{
+  padding: 0 7%;
+  background-color: #F9DC5C;
+}
+h1{
+  font-family: 'Lobster', cursive;
+  text-shadow: -3px 1px #ffff;
+}
+h2{
+  font-family: 'Spartan', sans-serif;
+}
+h3{
+  padding: 20px;
+  font-style: italic;
+}
+h3 span{
+  font-style: normal;
+}
+h4{
+  font-size: 1.5em;
+}
+p{
+  font-size: 1.2em;
+}
+
+.form-control{
+  border-radius: 25px;
+}
+
+#publicBanner{
+  /* background-image: url(img/publicBanner.jpg); */
+  /* background-size: cover;
+  background-position: 50% 50%; */
+  background-color: #F9DC5C;
+  padding: 25px 0;
+}
+
+#userBanner{
+  background-image: url(img/userBanner.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 20vh 0;
+}
+#frankie{
+  height:100%;
+  max-height: 50vh;
+  /* position:sticky; */
+}
+
+
+hr{
+    border-top: 2px solid black;
+}
+
+main {
+  min-height: 30vh;
+
+  background-color: #F9DC5C;
+}
+
+footer {
+  padding: 0!important;
+  min-height: 20vh;
+}
+#btn2 {
+  float: right;
+  /* margin: 20px; */
+  background-color: #fff;
+  color: #000;
+  outline-style: none;
+    box-shadow: -1px .5px 0 1px #EE2562, -2px 2px 0 2px #6290C3 ;
+}
+
+.wrapper{
+  background-color: #f2f2f2 ;
+  padding: 5% 10%;
+  padding-bottom: 10%;
+  border-radius:15px;
+}
+#nameLabel, #typeLabel{
+  max-width: 150px;
+  transform: translateY(.5em);
+}
+#user_name, #monsterType{
+  height: 30px;
+  font-size: 1.5em;
+}
+#btn1{
+  margin: 20px;
+  float: right;
+  padding: 2% 10%;
+  background-color: #F9DC5C;
+  color: #000;
+  outline-style: none;
+    box-shadow: -1px .5px 0 1px #EE2562, -2px 2px 0 2px #6290C3 ;
+}
+
+/* about me  */
+.form-control{
+  border-radius: 10px;
+}
+.about_grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  width: 100%;
+  margin: 10%;
+}
+.about_col{
+  height: 200px;
+}
+.about_col hr{
+  width: 65%;
+}
+.about_col_1{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.about_col_3{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 80px;
+}
+.slider{
+  width: 85%
+}
+
+
+
+
+/*  gender section , costume checkbox refrence https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio*/
+
+/* The container */
+.myGenderCon {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.myGenderCon p{
+margin-left:90px;
+}
+/* Hide the browser's default radio button */
+.myGenderCon input, .genderOther input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100px;
+  border-radius: 10px;
+}
+ #female{
+   background-color: #EE2562 ;
+ }
+ #male{
+ background-color: #4679b3 ;
+ }
+ #genderless{
+  background-color: #8f7f94;
+ }
+ #other{
+/*background: linear-gradient(166deg, rgba(0,0,0,1) 0%, rgba(7,93,86,1) 46%, rgba(42,80,148,1) 54%, rgba(84,9,121,1) 62%, rgba(0,0,0,1) 100%); */
+
+background: linear-gradient(166deg, rgba(0,0,0,1) 0%, rgba(84,9,121,1) 61%, rgba(0,0,0,1) 100%);
+
+}
+
+.myGenderCon:hover input ~  #female {
+   background-color: #ff009a;
+}
+.myGenderCon:hover input ~  #genderless {
+   background-color: #591f6b;
+   }
+.myGenderCon:hover input ~  #male {
+   background-color: #0065ff;
+}
+
+.myGenderCon:hover input ~  #other {
+background: #212121;
+   }
+
+/* When the radio button is checked, add a blue background */
+.myGenderCon input:checked ~  #female, .myGenderCon input:checked ~  #male,.myGenderCon input:checked ~  #genderless {
+  background-color: #F9DC5C ;
+    box-shadow: 0px -4px 0 0px #EE2562, 0px -8px 0 0px #6290C3 ;
+}
+ .myGenderCon input:checked ~  #other {
+     box-shadow: 0px -3px 0 0px #F9DC5C, 0px -4px 0 0px #EE2562, 0px -8px 0 0px #6290C3 ;
+ }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.myGenderCon input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.myGenderCon .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.break{
+  height: 80px;
+}
+
+/* size slider stylation based on https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider */
+
+.slider_grid{
+width:95%;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+}
+.slider_grid p{
+/* margin-top:110px; */
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 100px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+      background: linear-gradient(to bottom right,
+                transparent 50%,
+                #F9DC5C 50%);
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+    /* border-radius: 50px; */
+    border-color: rgba(255, 0, 0, 0);
+  /* background: #6290C3 ; */
+  background-image: url('img/monster_head.svg');
+  background-repeat: no-repeat;
+  background-color: rgba(255, 0, 0, 0);
+  cursor: pointer;
+   transform: translateY(40px);
+}
+
+#hugeP{
+  /* transform: translateX(-120px); */
+  transform: translate(-120px, 100px);
+    text-transform: uppercase;
+}
+#tinyP{
+  transform: translateY(100px);
+
+}
+/* cuteness slider */
+.slideCute {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 15px;
+  background: #6c757d;
+  /* background: #F9DC5C; */
+  outline: none;
+  opacity: 0.7;
+  border-radius:10px;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slideCute:hover {
+  opacity: 1;
+}
+
+
+.slideCute::-moz-range-thumb {
+  width: 50px;
+  height: 15px;
+  /* background: #6290C3; */
+  background: #F9DC5C;
+  cursor: pointer;
+}
+#cuteness{
+  /* transform: translate(0 50px); */
+  margin-top: 35px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#cuteP{
+  /* transform: translate(0, 20px); */
+}
+#scaryP{
+  width: 78%;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  /* float: right; */
+  text-align: right;
+  /* transform: translate(-60px, 0px); */
+
+}
+
+.two_col_grid{
+  display: inline-grid;
+  grid-template-columns: 40px auto;
+}
